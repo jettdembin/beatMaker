@@ -20,6 +20,11 @@
             <option value="./sounds/kick-classic.wav">Classic Kick</option>
             <option value="./sounds/kick-808.wav">808 Kick</option>
             <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+            <option value="./sounds/kick-big.wav">Kick Big</option>
+            <option value="./sounds/kick-deep.wav">Kick Deep</option>
+            <option value="./sounds/kick-dry.wav">Kick Dry</option>
+            <option value="./sounds/kick-electro01.wav">Kick Electro</option>
+            <option value="./sounds/kick-gritty.wav">Kick Gritty</option>
           </select>
         </div>
         <div class="kick">
@@ -36,14 +41,17 @@
       <div class="snare-track">
         <div class="controls">
           <h1>Snare</h1>
-          <button data-track="2" class="mute snare-volume">
+          <button data-track="1" class="mute snare-volume">
             <i class="fas fa-microphone-alt-slash"></i>
           </button>
           <select name="snare-select" id="snare-select">
+            <option value="./sounds/snare-big.wav">Snare Big</option>
+            <option value="./sounds/snare-brute.wav">Snare Brute</option>
             <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
-            <option value="./sounds/snare-808.wav">808 Snare</option>
-            <option value="./sounds/snare-vinyl02.wav">Snare Vinyl</option>
             <option value="./sounds/snare-lofi01.wav">Snare Lofi 1</option>
+            <option value="./sounds/snare-smasher.wav">Snare Smasher</option>
+            <option value="./sounds/snare-vinyl02.wav">Snare Vinyl</option>
+            <option value="./sounds/snare-808.wav">808 Snare</option>
           </select>
         </div>
         <div class="snare">
@@ -60,13 +68,17 @@
       <div class="hihat-track">
         <div class="controls">
           <h1>Hihat</h1>
-          <button data-track="3" class="mute hithat-volume">
+          <button data-track="2" class="mute hithat-volume">
             <i class="fas fa-microphone-alt-slash"></i>
           </button>
           <select name="hihat-select" id="hihat-select">
             <option value="./sounds/hihat-acoustic01.wav">
               Hithat Acoustic
             </option>
+            <option value="./sounds/hihat-analog.wav">Hihat Analog</option>
+            <option value="./sounds/hihat-plain.wav">Hihat Plain</option>
+            <option value="./sounds/hihat-reso.wav">Hihat Reso</option>
+            <option value="./sounds/hihat-ring.wav">Hihat Ring</option>
             <option value="./sounds/hihat-808.wav">808 Hihat</option>
           </select>
         </div>
@@ -82,6 +94,10 @@
         </div>
       </div>
       <button class="play">Play</button>
+      <div class="tempo">
+        <input type="range" class="tempo-slider" max="300" min="20" value="150"
+        <p>Tempo: <span class="tempo-nr">150</span></p>
+      </div>
     </div>
 
     <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
