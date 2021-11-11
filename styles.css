@@ -4,29 +4,32 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: snas-serif;
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
 i,
 svg {
   pointer-events: none;
 }
 
-.kick-track,
-.snare-track,
-.hihat-track {
+.sequencer {
+  width: 90%;
+  height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 80%;
-  justify-content: space-between;
-  margin-top: 5rem;
-}
-
-.kick,
-.snare,
-.hihat {
-  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 2rem;
 }
 
 .kick-pad,
@@ -34,42 +37,47 @@ svg {
 .hihat-pad {
   width: 5rem;
   height: 5rem;
+  border-radius: 100%;
   margin: 1rem 0.5rem;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-
 .kick-pad {
-  background: rgb(164, 124, 197);
+  background: rgba(231, 128, 59, 0.534);
 }
-
 .snare-pad {
-  background: rgb(184, 165, 104);
+  background: rgba(216, 59, 177, 0.534)
 }
-
 .hihat-pad {
-  background: rgb(119, 204, 130);
+  background: rgb(50, 184, 56, 0.534);
 }
-
 .kick-pad.active {
-  background: rgb(164, 69, 214);
+  background: rgb(231, 128, 59);
+  box-shadow: none;
 }
-
 .snare-pad.active {
-  background: rgb(197, 164, 6);
+  background: rgb(218, 58, 178);
+  box-shadow: none;
 }
-
 .hihat-pad.active {
-  background: rgb(18, 209, 43);
+  background: rgb(50, 184, 56);
+  box-shadow: none;
 }
 
-.sequencer {
+.hihat-track,
+.snare-track,
+.kick-track {
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
 }
-
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
 .controls {
   display: flex;
   justify-content: space-between;
@@ -77,15 +85,15 @@ svg {
   flex: 1;
   margin: 0rem 2rem;
 }
-
 .controls button {
-  padding: 0.5rem;
+  padding: 1rem;
   border: none;
-  background: rgb(95, 92, 92);
   color: white;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  background: rgb(182, 182, 182);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .pad {
@@ -94,39 +102,48 @@ svg {
 
 .play {
   padding: 1rem 2rem;
+  margin-top: 3rem;
   font-size: 1.5rem;
-  background: rgb(95, 92, 92);
+  background: rgb(88, 88, 88);
+  border-radius: .2rem;
   color: white;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   cursor: pointer;
-  margin-top: 3rem;
 }
 
 select {
   padding: 1rem;
   font-size: 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: .2rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .mute.active {
-  background: rgb(180, 180, 180);
+  background: rgb(88, 88, 88);
+  box-shadow: none;
 }
 
 .tempo {
-  margin: 1rem;
+  margin: 3rem;
   width: 30%;
 }
-
 .tempo-slider {
-  padding: 0.15rem;
+  padding: 0.2rem;
   -webkit-appearance: none;
   margin: 1rem 0rem;
   width: 100%;
   position: relative;
-  background: rgb(80, 79, 79);
+  background: rgb(88, 88, 88);
   cursor: pointer;
   border-radius: 1rem;
-  border: none;
-  font-size: 0.5rem;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
 }
 
 @keyframes playTrack {
