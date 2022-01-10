@@ -1,4 +1,4 @@
-# Beatz on Deck
+# Beats on Deck
 
 This application is a beat application that allows the user to create a beat with kick, snare, and a hi-hat.
 
