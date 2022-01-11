@@ -4,6 +4,6 @@ This application is a beat application that allows the user to create a beat wit
 
 It demonstrates the use of object oriented programming through the use of classes.
 
-The user may change the sound of each, mute, and change the tempo.
+The user may change the sound, mute, and the tempo of each respective instrument.
 
 This application is not intended for mobile use at this time.
