@@ -59,6 +59,10 @@ main {
   justify-content: space-around;
 }
 
+.controls h2 {
+  font-size: 2rem;
+}
+
 .position-me {
 }
 
@@ -69,8 +73,8 @@ main {
 .kick-pad,
 .snare-pad,
 .hihat-pad {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 100%;
   margin: 1rem 0.5rem;
   cursor: pointer;
