@@ -76,7 +76,6 @@ main {
   width: 6rem;
   height: 6rem;
   border-radius: 100%;
-  margin: 1rem 0.5rem;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -223,7 +222,6 @@ select {
     .hihat-pad {
       width: 2rem;
       height: 2rem;
-      margin: 1rem .3rem;
     }
     .play {
       font-size: 1rem;
@@ -233,7 +231,6 @@ select {
     }
     .controls h2 {
       font-size: 1.6rem;
-      margin: 1rem 2rem;
     }
 }
 
@@ -256,13 +253,34 @@ select {
     align-items: end;
     justify-content: space-between;
   }
+  .hihat-track,
+  .snare-track,
+  .kick-track {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .controls > div {
+    display: flex;
+    margin-left: 1rem;
+  }
+  .kick,
+  .snare,
+  .hihat {
+    position: relative;
+    left: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   /* pad size stay*/
   .kick-pad,
   .snare-pad,
   .hihat-pad {
-  width: 2rem;
-  height: 2rem;
-  margin: 1rem 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
   }
   /* track container  stay */
   select {
@@ -272,13 +290,13 @@ select {
   /* stay */
   .controls h2 {
     font-size: 1.6rem;
-    margin: 1rem 2rem;
+    margin: auto;
   }
   /* mute btn stay */
   .controls button {
-  padding: .3rem;
-  font-size: 1rem;
-  margin-right: 1rem;
+    padding: .3rem;
+    font-size: 1rem;
+    margin-right: 1rem;
   } 
   /* stay */
   .play {
@@ -325,7 +343,6 @@ select {
 @media only screen and (max-width: 375px) {
   .controls h2 {
     font-size: 1.6rem;
-    margin: 1rem 2rem;
   }
   /* pad size stay*/
   .kick-pad,
@@ -333,7 +350,6 @@ select {
   .hihat-pad {
     width: 1rem;
     height: 1rem;
-    margin: 1rem 0.5rem;
   }
 }
 /* for iphone 12/13 */
@@ -346,10 +362,8 @@ select {
   .hihat-pad {
     width: 2rem;
     height: 2rem;
-    margin: 1rem 0.5rem;
   }
   .controls h2 {
     font-size: 1.6rem;
-    margin: 1rem 2rem;
   }
 }
