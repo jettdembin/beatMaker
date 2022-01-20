@@ -120,9 +120,13 @@ main {
 }
 .controls {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
+}
+
+.controls h2 {
+  margin: auto;
 }
 
 .controls button {
