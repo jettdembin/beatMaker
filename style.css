@@ -227,8 +227,11 @@ select {
     .tempo p {
       font-size: 1rem;
     }
-  }
-
+    .controls h2 {
+      font-size: 1.6rem;
+      margin: 1rem 2rem;
+    }
+}
 
 @media only screen and (max-width: 500px) {
   header {
@@ -264,6 +267,7 @@ select {
   }
   /* stay */
   .controls h2 {
+    font-size: 1.6rem;
     margin: 1rem 2rem;
   }
   /* mute btn stay */
@@ -315,6 +319,10 @@ select {
 }
 /* for  galaxy s10 */
 @media only screen and (max-width: 375px) {
+  .controls h2 {
+    font-size: 1.6rem;
+    margin: 1rem 2rem;
+  }
   /* pad size stay*/
   .kick-pad,
   .snare-pad,
@@ -335,5 +343,9 @@ select {
     width: 2rem;
     height: 2rem;
     margin: 1rem 0.5rem;
+  }
+  .controls h2 {
+    font-size: 1.6rem;
+    margin: 1rem 2rem;
   }
 }
