@@ -11,18 +11,28 @@ html, body {
 }
 
 body {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1514900389014-caae55f63513?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGFyayUyMG1vdW50YWluc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 i,
 svg {
   pointer-events: none;
 }
 
+select {
+  font-family: 'Poppins', sans-serif;
+}
+
 header {
+  color: rgb(225, 225, 225);
   height: 10vh;
   font-size: 1.5rem;
   display: flex;
@@ -45,9 +55,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border-radius: 2rem;
+  background: rgba(248,248,248,0.7);
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px);
+border: 1px solid rgba(248,248,248,0.15);
+border-radius: 2rem;
 }
 
 .track-wrapper {
@@ -121,6 +133,10 @@ main {
   margin: auto;
 }
 
+.controls>div {
+  width: 70%;
+}
+
 .controls button {
   padding: 1rem;
   border: none;
@@ -191,17 +207,10 @@ select {
   and (min-device-width: 250px) 
   and (max-device-height: 1280px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-    /* HAS GOOD LAYOUT */
-    header {
-      display: none;
-    }
     .sequencer {
       position: relative;
       margin: none;
       display: block;
-      background-color: #fff;
-      box-shadow: none;
-      border-radius: 0;
     }
     select {
       padding: .3rem;
@@ -222,6 +231,10 @@ select {
 }
 
 @media only screen and (max-width: 1000px) {
+  .controls>div {
+    width: 100%;
+    margin-left: 2rem;
+  }
   .kick-track, .snare-track, .hihat-track  {
     flex-direction: column;
   }
@@ -244,6 +257,9 @@ select {
 }
 /* for  galaxy s10 */
 @media only screen and (max-width: 440px) {
+  header {
+    font-size: 1.2rem;
+  }
   .controls h2 {
     font-size: 1.6rem;
   }
