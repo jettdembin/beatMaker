@@ -160,3 +160,9 @@ drumKit.tempoSlider.addEventListener("input", function(e) {
 drumKit.tempoSlider.addEventListener("change", function(e) {
   drumKit.updateTempo(e);
 });
+
+//Outro 
+const outroText = document.querySelector(".outro-logo h6");
+outroText.textContent = "</JETT>"
+const logoCntr = document.querySelector(".outro-logo-cntr");
+const outroLogo = document.querySelector(".outro-logo");
