@@ -63,18 +63,11 @@ main {
   font-size: 2rem;
 }
 
-.position-me {
-}
-
-.rotate-me {
-}
-
-
 .kick-pad,
 .snare-pad,
 .hihat-pad {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 100%;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -217,12 +210,6 @@ select {
     .controls button {
       padding: .3rem;
     } 
-    .kick-pad,
-    .snare-pad,
-    .hihat-pad {
-      width: 2rem;
-      height: 2rem;
-    }
     .play {
       font-size: 1rem;
     }
@@ -234,136 +221,36 @@ select {
     }
 }
 
-@media only screen and (max-width: 500px) {
-  header {
-    display: none;
+@media only screen and (max-width: 1000px) {
+  .kick-track, .snare-track, .hihat-track  {
+    flex-direction: column;
   }
-  .sequencer {
-    position: relative;
-    margin: none;
-    display: block;
-    background-color: #fff;
-    box-shadow: none;
-    border-radius: 0;
+  .kick-track>.controls, .snare-track>.controls, .hihat-track>.controls {
+    margin-bottom: 2rem;
   }
-  .track-wrapper {
-    width: 15vw;
-    position: relative;
-    flex-direction: row;
-    align-items: end;
-    justify-content: space-between;
-  }
-  .hihat-track,
-  .snare-track,
-  .kick-track {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .controls > div {
-    display: flex;
-    margin-left: 1rem;
-  }
-  .kick,
-  .snare,
-  .hihat {
-    position: relative;
-    left: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+/* for  smaller screens*/
+@media only screen and (max-width: 600px) {
+  .controls h2 {
+    font-size: 1.6rem;
   }
   /* pad size stay*/
   .kick-pad,
   .snare-pad,
   .hihat-pad {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-  }
-  /* track container  stay */
-  select {
-    padding: .3rem;
-    font-size: 1rem;
-  }
-  /* stay */
-  .controls h2 {
-    font-size: 1.6rem;
-    margin: auto;
-  }
-  /* mute btn stay */
-  .controls button {
-    padding: .3rem;
-    font-size: 1rem;
-    margin-right: 1rem;
-  } 
-  /* stay */
-  .play {
-    position: relative;
-    left: -40%;
-    display: flex;
-    margin: auto;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-  /* stay */
-  .tempo {
-    position: relative;
-    left: -50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    width: 100%;
-    height: 53%;
-  }
-  /* stay */
-  .tempo-slider {
-    padding: .2rem 10rem;
-    margin: .5rem 0rem;
-    width: 500px;
-  }
-  /* stay */
-  .tempo p {
-    font-size: 1rem;
-    text-align: center;
-  }
-  /* stay */
-  .position-me {
-    transform: translateX(-100%);
-  }
-  .rotate-me {
-    transform: rotate(-90deg);
-    transform-origin: right top;
-    text-align: right;
+    width: 3rem;
+    height: 3rem;
   }
 }
 /* for  galaxy s10 */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 440px) {
   .controls h2 {
     font-size: 1.6rem;
   }
-  /* pad size stay*/
-  .kick-pad,
-  .snare-pad,
-  .hihat-pad {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-/* for iphone 12/13 */
-@media only screen and (max-width: 375px)
-  and (min-device-height: 800px) 
-  {
-  /* pad size stay*/
   .kick-pad,
   .snare-pad,
   .hihat-pad {
     width: 2rem;
     height: 2rem;
-  }
-  .controls h2 {
-    font-size: 1.6rem;
   }
 }
